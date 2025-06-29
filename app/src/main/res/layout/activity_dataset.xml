@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <ScrollView
+        android:id="@+id/scroll_dataset"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_open_kaggle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DATASET"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#03A9F4"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dataset ini berisi 1461 data cuaca harian di Seattle.\n\nTerdapat 6 kolom utama:\n- Tanggal pengamatan\n- Curah hujan (mm)\n- Suhu maksimum (°C)\n- Suhu minimum (°C)\n- Kecepatan angin rata-rata (m/s)\n- Kondisi cuaca (Rain, Sun, dll)"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Statistik Cuaca Rata-rata:\n- Curah hujan: 3.03 mm/hari\n- Suhu Maksimum: 16.44°C\n- Suhu Minimum: 8.23°C\n- Kecepatan Angin: 3.24 m/s"
+                android:textSize="16sp"
+                android:textColor="#444444"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Distribusi Kondisi Cuaca:\n- Rain: 641 hari\n- Sun: 640 hari\n- Fog: 101 hari\n- Drizzle: 53 hari\n- Snow: 26 hari"
+                android:textSize="16sp"
+                android:textColor="#444444"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#9E9E9E"
+                android:layout_marginBottom="16dp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="2021-01-01\nRain\n12°C / 5°C\n2.3 m/s"
+                        android:textColor="#000000"
+                        android:padding="12dp"
+                        android:background="#EEEEEE"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="2021-01-02\nSun\n15°C / 7°C\n3.1 m/s"
+                        android:textColor="#000000"
+                        android:padding="12dp"
+                        android:background="#EEEEEE"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="2021-01-03\nFog\n10°C / 6°C\n1.2 m/s"
+                        android:textColor="#000000"
+                        android:padding="12dp"
+                        android:background="#EEEEEE"
+                        android:layout_marginEnd="8dp" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_open_kaggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lihat Dataset Asli di Kaggle"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#4CAF50"
+        android:layout_above="@id/btn_back_dataset"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btn_back_dataset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kembali"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#03A9F4"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="24dp" />
+
+</RelativeLayout>

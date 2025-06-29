@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:paddingBottom="16dp"
+    android:fitsSystemWindows="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_back"
+        android:layout_alignParentTop="true"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#F5F5F5"
+                android:elevation="4dp"
+                android:padding="16dp"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Project Domain"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#03A9F4"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Proyek ini berada dalam domain Meteorologi dan Prediksi Cuaca, yang bertujuan untuk memanfaatkan data historis cuaca dalam membangun model prediksi suhu maksimum menggunakan teknik pembelajaran mesin, khususnya deep learning (LSTM). Informasi ini penting untuk berbagai sektor seperti pertanian, pariwisata, transportasi, dan kesehatan masyarakat."
+                    android:textSize="16sp"
+                    android:textColor="#444444"
+                    android:lineSpacingExtra="6dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#F5F5F5"
+                android:elevation="4dp"
+                android:padding="16dp"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Problem Statements"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#03A9F4"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fluktuasi cuaca yang tidak menentu di kota Seattle dapat menyebabkan ketidakpastian dalam perencanaan aktivitas harian dan ekonomi. Namun, informasi suhu yang akurat tidak selalu tersedia secara real-time atau dengan akurasi yang tinggi. Oleh karena itu, dibutuhkan sebuah model yang mampu memprediksi suhu maksimum harian berdasarkan data cuaca historis, termasuk suhu minimum, curah hujan, kecepatan angin, dan kondisi cuaca."
+                    android:textSize="16sp"
+                    android:textColor="#444444"
+                    android:lineSpacingExtra="6dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#F5F5F5"
+                android:elevation="4dp"
+                android:padding="16dp"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Goals"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#03A9F4"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Menganalisis dataset cuaca Seattle dan mengidentifikasi pola dari variabel cuaca.\n\n• Mengembangkan model prediktif berbasis deep learning (LSTM) untuk memprediksi suhu maksimum harian.\n\n• Mengevaluasi performa model berdasarkan metrik regresi (MSE, MAE, R²).\n\n• Mengkategorikan hasil prediksi suhu ke dalam label seperti Dingin, Sedang, dan Panas untuk keperluan klasifikasi praktis."
+                    android:textSize="16sp"
+                    android:textColor="#444444"
+                    android:lineSpacingExtra="6dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#F5F5F5"
+                android:elevation="4dp"
+                android:padding="16dp"
+                android:layout_marginBottom="32dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Solution Statements"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#03A9F4"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Eksplorasi dan praproses data: normalisasi fitur numerik, encoding fitur kategorikal.\n\n• Pengembangan model deep learning menggunakan LSTM, yang cocok untuk menangkap pola urutan dan dependensi waktu dari data cuaca.\n\n• Evaluasi model menggunakan MAE, MSE, dan R², serta konversi hasil prediksi ke dalam kategori untuk kebutuhan interpretasi praktis.\n\n• Penerapan model untuk prediksi suhu maksimum dari data baru, dengan tujuan implementasi nyata seperti sistem peringatan dini atau aplikasi perencanaan cuaca."
+                    android:textSize="16sp"
+                    android:textColor="#444444"
+                    android:lineSpacingExtra="6dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kembali ke Beranda"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#03A9F4"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+</RelativeLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="?attr/actionBarSize"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Arsitektur Model"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#03A9F4"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Model ini menggunakan arsitektur LSTM (Long Short-Term Memory) yang dilatih untuk memprediksi suhu maksimum harian berdasarkan data historis cuaca.\n\nInput terdiri dari:\n- Presipitasi\n- Suhu Minimum\n- Kecepatan Angin\n- One-hot encoding kondisi cuaca\n\nModel dilatih dan diekspor ke format TensorFlow Lite untuk digunakan di aplikasi Android."
+                android:textSize="16sp"
+                android:textColor="#444444"
+                android:lineSpacingExtra="6dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="# Modeling\n# Define the model"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:typeface="monospace"
+                android:background="#F5F5F5"
+                android:padding="12dp"
+                android:layout_marginTop="16dp"
+                android:elevation="2dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="model = Sequential([\n    layers.LSTM(64, activation=&quot;relu&quot;, return_sequences=True, input_shape=(X_train.shape[1], 1)),\n    layers.LSTM(32, activation=&quot;relu&quot;),\n    layers.Dense(16, activation=&quot;relu&quot;),\n    layers.Dense(1, activation=&quot;linear&quot;)\n])"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:typeface="monospace"
+                android:background="#F5F5F5"
+                android:padding="12dp"
+                android:layout_marginTop="8dp"
+                android:elevation="2dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="# Compile the model\nmodel.compile(optimizer=Adam(learning_rate=0.001), loss=&quot;mean_squared_error&quot;, metrics=[&quot;mae&quot;])"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:typeface="monospace"
+                android:background="#F5F5F5"
+                android:padding="12dp"
+                android:layout_marginTop="8dp"
+                android:elevation="2dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="model.summary()"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:typeface="monospace"
+                android:background="#F5F5F5"
+                android:padding="12dp"
+                android:layout_marginTop="8dp"
+                android:elevation="2dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/model"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="# Fit the model\nhistory = model.fit(X_train_lstm, y_train, epochs=50, batch_size=32, validation_data=(X_test_lstm, y_test))"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:typeface="monospace"
+                android:background="#F5F5F5"
+                android:padding="12dp"
+                android:layout_marginTop="8dp"
+                android:elevation="2dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="## Model Simulation\n# Contoh data cuaca baru untuk diprediksi\nnew_data = pd.DataFrame({\n    'precipitation': [0.1],\n    'temp_min': [5.0],\n    'wind': [2.5],\n    'weather_drizzle': [0],\n    'weather_fog': [0],\n    'weather_rain': [1],\n    'weather_snow': [0]\n})\n\n# Define the numerical features for scaling (excluding temp_max)\nnumerical_features = ['precipitation', 'temp_min', 'wind']\n\n# Create a new DataFrame with only the numerical features from new_data\nnew_data_numerical = new_data[numerical_features]\n\n# Fit the scaler on only the numerical features used in the new data\nscaler.fit(new_data_numerical) # Fit the scaler on the new data's numerical features\n\n# Now apply the transform method\nnew_data[numerical_features] = scaler.transform(new_data_numerical)\n\n# Ubah ke format input untuk LSTM (samples, timesteps, features)\nnew_data_lstm = new_data.astype(np.float32).values.reshape(new_data.shape[0], new_data.shape[1], 1)\n\n# Prediksi suhu maksimum\npredicted_temp = model.predict(new_data_lstm)\nprint(f\Suhu Maksimum yang Diprediksi: {predicted_temp[0][0]:.2f}°C\)"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:typeface="monospace"
+            android:background="#F5F5F5"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:elevation="2dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hasil_model_simulasi"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kembali"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        android:backgroundTint="#03A9F4"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+</FrameLayout>

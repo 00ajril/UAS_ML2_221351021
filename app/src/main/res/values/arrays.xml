@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string-array name="weather_options">
+            <item>Sun</item>
+            <item>Drizzle</item>
+            <item>Fog</item>
+            <item>Rain</item>
+            <item>Snow</item>
+        </string-array>
+</resources>

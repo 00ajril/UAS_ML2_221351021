@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:fitsSystemWindows="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_back"
+        android:layout_alignParentTop="true"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="24dp"
+            android:paddingBottom="16dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="16dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="12dp"
+                android:layout_marginBottom="16dp"
+                card_view:cardElevation="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text=" Penjelasan Gambar Histogram:\n\nSumbu X:\nBerlabel 'Suhu Maksimum (°C)' – menunjukkan rentang suhu maksimum, mulai dari sekitar -2°C hingga 35°C. Setiap batang mewakili rentang suhu tertentu (misalnya 0–2°C, 2–4°C, dan seterusnya).\n\nSumbu Y:\nBerlabel 'Frekuensi' – menunjukkan berapa kali suhu maksimum dalam rentang tertentu terjadi.\n\nInterpretasi Warna:\nWarna biru menunjukkan suhu yang lebih rendah, sementara warna merah menunjukkan suhu yang lebih tinggi. Transisi warna dari biru ke merah menunjukkan perubahan suhu dari dingin ke panas secara visual.\n\nInterpretasi Data:\nDistribusi terlihat berbentuk miring ke kanan (right-skewed). Puncak histogram berada di sekitar suhu 13–15°C, artinya suhu ini adalah yang paling sering terjadi. Frekuensi menurun secara bertahap setelah melewati suhu 15°C. Suhu ekstrem tinggi (di atas 30°C) dan sangat rendah (di bawah 5°C) jarang terjadi."
+                    android:textSize="16sp"
+                    android:textColor="#555555" />
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="16dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="12dp"
+                android:layout_marginBottom="16dp"
+                card_view:cardElevation="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="Sumbu X:\nKategori Cuaca: drizzle, rain, sun, snow, fog\n\nSumbu Y:\nSuhu Minimum (°C) untuk masing-masing kategori cuaca\n\nInformasi Utama:\n• Sun memiliki suhu minimum tertinggi secara umum.\n• Snow menunjukkan suhu paling rendah, dengan nilai median mendekati 0°C.\n• Rain dan drizzle cenderung memiliki suhu minimum sedang.\n• Fog punya sebaran suhu yang cukup luas.\n• Titik di luar kotak adalah outlier (data ekstrem)."
+                    android:textSize="16sp"
+                    android:textColor="#555555" />
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_2"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="16dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="12dp"
+                android:layout_marginBottom="16dp"
+                card_view:cardElevation="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text=" Penjelasan Gambar Tren Suhu Maksimum:\n\nSumbu X:\nBerisi rentang waktu (tanggal) dari awal 2012 hingga akhir 2015. Format tanggal ditampilkan per bulan dan tahun (misal: 2012-01, 2013-07, dst). Ini membantu kita melacak tren musiman dari tahun ke tahun.\n\nSumbu Y:\nMenunjukkan nilai suhu maksimum harian dalam satuan °C. Nilainya berkisar dari sekitar 0°C hingga di atas 35°C.\n\nInterpretasi Tren:\nTerlihat pola musiman yang berulang setiap tahun: Suhu naik di pertengahan tahun (sekitar Juni–Agustus), lalu menurun di akhir dan awal tahun berikutnya. Ini menunjukkan musim panas dan musim dingin yang cukup jelas. Fluktuasi harian sangat terlihat, tetapi pola tahunan tetap konsisten. Puncak suhu maksimum umumnya terjadi di musim panas (sekitar pertengahan tahun), mencapai lebih dari 30°C. Penurunan suhu drastis juga tampak menjelang akhir tahun."
+                    android:textSize="16sp"
+                    android:textColor="#555555" />
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_3"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="16dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="12dp"
+                android:layout_marginBottom="16dp"
+                card_view:cardElevation="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text=" Penjelasan Distribusi Jenis Cuaca Harian:\n\nSumbu X :\nMenampilkan kategori cuaca yang diamati, yaitu:\n- drizzle (gerimis)\n- rain (hujan)\n- sun (cerah/matahari)\n- snow (salju)\n- fog (kabut)\n\nSetiap kategori dicantumkan dalam posisi miring agar muat dalam tampilan horizontal.\n\n Sumbu Y :\nMenunjukkan jumlah hari cuaca tersebut terjadi selama periode data. Skala berada pada interval 0 hingga sekitar 650 hari.\n\n Interpretasi Data:\n- Rain dan sun mendominasi grafik, masing-masing terjadi lebih dari 640 hari, menandakan bahwa hujan dan cuaca cerah merupakan kondisi paling umum.\n- Fog terjadi sekitar 100 hari, menjadikannya cuaca menengah dalam frekuensi.\n- Drizzle terjadi lebih jarang, hanya sekitar 50 hari.\n- Snow adalah yang paling jarang terjadi, dengan kurang dari 30 hari dalam total pengamatan."
+                    android:textSize="16sp"
+                    android:textColor="#555555" />
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_4"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="16dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="12dp"
+                android:layout_marginBottom="16dp"
+                card_view:cardElevation="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="Sumbu X dan Y:\nKedua sumbu menampilkan fitur-fitur cuaca berikut:\n• precipitation (curah hujan)\n• temp_max (suhu maksimum harian)\n• temp_min (suhu minimum harian)\n• wind (kecepatan angin)\n\n Warna dan Nilai Korelasi:\n• Warna merah tua menunjukkan korelasi positif tinggi (nilai mendekati 1).\n• Warna biru tua menunjukkan korelasi negatif tinggi (nilai mendekati -1).\n• Warna putih atau biru pucat menunjukkan korelasi rendah atau hampir tidak berkorelasi (nilai mendekati 0).\n• Angka di setiap sel menunjukkan nilai korelasi numerik antar fitur.\n\n Interpretasi Korelasi:\n• temp_max dan temp_min: Korelasi sangat tinggi (0.88) → logis karena suhu maksimum dan minimum harian biasanya naik-turun bersama.\n• precipitation dan wind: Korelasi sedang positif (0.33) → saat hujan, angin cenderung bertiup lebih kencang.\n• precipitation dan temp_max: Korelasi negatif (-0.23) → saat curah hujan tinggi, suhu maksimum cenderung lebih rendah.\n• wind dan temp_max/temp_min: Korelasi lemah dan negatif (-0.16  -0.074) → tidak ada hubungan kuat antara angin dan suhu.\n• Diagonal utama (nilai = 1): menunjukkan fitur dikorelasikan dengan dirinya sendiri."
+                    android:textSize="16sp"
+                    android:textColor="#555555" />
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_5"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="16dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="12dp"
+                android:layout_marginBottom="16dp"
+                card_view:cardElevation="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textSize="16sp"
+                    android:textColor="#555555"
+                    android:text="Grafik Kiri: Model MAE (Mean Absolute Error)\n\nSumbu X (Epoch): Menampilkan jumlah epoch (iterasi pelatihan), dari 0 hingga 50.\n\nSumbu Y (MAE): Menunjukkan nilai kesalahan absolut rata-rata antara prediksi dan nilai sebenarnya.\n\nGaris Biru (Train): MAE pada data pelatihan.\n\nGaris Oranye (Val): MAE pada data validasi.\n\n Interpretasi:\n• Di awal (epoch 0–5), MAE sangat tinggi, artinya model masih belajar dan melakukan banyak kesalahan.\n• Setelah sekitar epoch ke-10, kurva mulai stabil dan MAE menurun drastis.\n• Kurva train dan val sangat berdekatan hingga akhir epoch, menunjukkan tidak ada overfitting, dan model belajar dengan baik dan stabil.\n\n Grafik Kanan: Model Loss (MSE - Mean Squared Error)\n\nSumbu X (Epoch): Jumlah epoch yang sama (0–50).\n\nSumbu Y (Loss): Menampilkan nilai MSE, yaitu rata-rata kuadrat dari selisih prediksi dan target.\n\nGaris Biru (Train) dan Oranye (Val): Menunjukkan loss masing-masing selama training dan validation.\n\n Interpretasi:\n• Sama seperti grafik MAE, nilai MSE awalnya sangat tinggi namun turun cepat di 10 epoch pertama.\n• Setelah itu, nilai loss melandai dan tetap rendah.\n• Ini menunjukkan konvergensi yang baik dari model — model tidak hanya akurat, tapi juga stabil." />
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_6"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="16dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:elevation="4dp"
+                card_view:cardCornerRadius="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textSize="16sp"
+                    android:textColor="#555555"
+                    android:text="Baris menunjukkan kondisi sebenarnya (aktual).\nKolom menunjukkan hasil prediksi model.\n\nMisalnya:\n\nBaris pertama (Aktual: Dingin) → Model memprediksi:\n• 56 kali benar (Dingin → Dingin)\n• 19 kali salah (Dingin → Sedang)\n• 0 kali salah (Dingin → Panas)\n\nBaris kedua (Aktual: Sedang):\n• 118 kali benar (Sedang → Sedang)\n• 20 kali salah jadi Dingin\n• 8 kali salah jadi Panas\n\nBaris ketiga (Aktual: Panas):\n• 39 kali benar (Panas → Panas)\n• 33 kali salah jadi Sedang\n• 0 kali salah jadi Dingin\n\n Ringkasan:\nModel paling akurat dalam mengenali Suhu Sedang (118 prediksi benar).\nModel kesulitan membedakan Suhu Panas dan Sedang — 33 kasus Panas justru dikira Sedang.\nUntuk Suhu Dingin, model cukup baik: 56 benar dari 75 kasus.\n\n Akurasi Keseluruhan:\nModel berhasil memprediksi dengan benar 213 dari 293 data, jadi:\nAkurasi = 72.77%" />
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kembali ke Beranda"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#03A9F4"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+</RelativeLayout>

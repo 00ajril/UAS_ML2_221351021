@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#FAFAFA">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:background="?attr/colorPrimary"
+        android:titleTextColor="@android:color/white"
+        android:elevation="4dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <EditText
+                android:id="@+id/input_precipitation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Presipitasi (mm)"
+                android:inputType="numberDecimal"
+                android:background="@android:drawable/edit_text"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/input_temp_min"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Suhu Minimum (°C)"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/edit_text"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/input_wind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kecepatan Angin (m/s)"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/edit_text"
+                android:padding="12dp" />
+
+            <TextView
+                android:id="@+id/text_weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cuaca: Sun"
+                android:layout_marginTop="12dp" />
+
+            <SeekBar
+                android:id="@+id/seek_weather"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="4"
+                android:layout_marginTop="4dp" />
+
+
+            <Button
+                android:id="@+id/btn_predict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prediksi"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#3F51B5"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btn_back_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kembali ke Beranda"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#CCCCCC"
+                android:textColor="#333333" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
